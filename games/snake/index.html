@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Snake – Score: 0</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="layout">
+    <header class="header">
+      <h1>Classic Snake</h1>
+      <div class="scoreboard" aria-live="polite">
+        <span>Score: <span id="score">0</span></span>
+        <span>Best: <span id="best-score">0</span></span>
+      </div>
+    </header>
+
+    <div class="canvas-wrapper">
+      <canvas
+        id="game-canvas"
+        width="600"
+        height="600"
+        tabindex="0"
+        role="application"
+        aria-label="Snake game board"
+      ></canvas>
+
+      <div id="game-over" class="overlay hidden" role="alert" aria-hidden="true">
+        <div class="dialog">
+          <h2>Game Over</h2>
+          <p>Your score: <span id="final-score">0</span></p>
+          <p class="best-readout">Best score: <span id="final-best-score">0</span></p>
+          <button id="restart-button" type="button">Restart</button>
+        </div>
+      </div>
+    </div>
+
+    <p class="hint">Use the arrow keys to steer the snake and collect food.</p>
+  </main>
+
+  <script src="main.js" type="module"></script>
+</body>
+</html>
